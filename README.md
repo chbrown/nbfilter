@@ -24,7 +24,7 @@ python -m nbfilter.clean < research.ipynb | sponge research.ipynb
 
 From your repository's root directory:
 
-Run the following command to implement a filter called `ipynbfilter` in your `.git/config` settings:
+Run the following command to define a filter called `ipynbfilter` in your `.git/config` settings:
 ```sh
 git config filter.ipynbfilter.clean 'python -m nbfilter.clean'
 ```
