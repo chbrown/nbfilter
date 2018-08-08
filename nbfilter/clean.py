@@ -53,8 +53,16 @@ def main():
     parser.add_argument('-v', '--version',
                         action='version',
                         version=__version__)
+    parser.add_argument('-i', '--input',
+                        help='input file (default: /dev/stdin)',
+                        type=argparse.FileType('r'),
+                        default=sys.stdin)
+    parser.add_argument('-o', '--output',
+                        help='output file (default: /dev/stdout)',
+                        type=argparse.FileType('w'),
+                        default=sys.stdout)
     opts = parser.parse_args()
-    clean_file(sys.stdin, sys.stdout)
+    clean_file(opts.input, opts.output)
 
 
 if __name__ == '__main__':
