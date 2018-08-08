@@ -1,6 +1,6 @@
-import setuptools
+from setuptools import setup
 
-setuptools.setup(
+setup(
     name='nbfilter',
     version='1.0.0',
     author='Christopher Brown',
@@ -10,7 +10,7 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url='https://github.com/chbrown/nbfilter',
     license='MIT',
-    packages=setuptools.find_packages(),
+    packages=['nbfilter'],
     install_requires=[
         'nbformat>=4',
     ],
