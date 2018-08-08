@@ -46,6 +46,14 @@ def clean_file(fp_in, fp_out):
 
 
 def main():
+    from . import __version__
+    import argparse
+    parser = argparse.ArgumentParser(
+        description='Filter .ipynb (nbformat) files')
+    parser.add_argument('-v', '--version',
+                        action='version',
+                        version=__version__)
+    opts = parser.parse_args()
     clean_file(sys.stdin, sys.stdout)
 
 
