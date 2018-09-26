@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='nbfilter',
-    version='1.0.0',
+    version='1.1.0',
     author='Christopher Brown',
     author_email='io@henrian.com',
     description='Filter .ipynb (nbformat) files to improve integration with version control systems (VCS)',
